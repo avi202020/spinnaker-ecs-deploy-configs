@@ -1,0 +1,24 @@
+redis:
+  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  configuration:
+    secure:
+      true
+
+services:
+  orca:
+    baseUrl: http://orca.spinnaker.dev.lkt.is:8083
+  front50:
+    baseUrl: http://front50.spinnaker.dev.lkt.is:8080
+  rosco:
+    enabled: false
+  deck:
+    baseUrl: http://deck.spinnaker.dev.lkt.is
+  clouddriver:
+    baseUrl: http://clouddriver.spinnaker.dev.lkt.is:7002
+  igor:
+    enabled: true
+    baseUrl: http://igor.spinnaker.dev.lkt.is:8088
+  echo:
+    enabled: true
+    baseUrl: http://echo.spinnaker.dev.lkt.is:8089
+

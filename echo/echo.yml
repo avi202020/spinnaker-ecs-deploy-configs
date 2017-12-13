@@ -1,0 +1,16 @@
+server:
+  port: 8089
+
+redis:
+  timeout: 5000
+  connection: redis://redis.spinnaker.dev.lkt.is:6379
+
+spinnaker:
+  cassandra:
+    enabled: false
+
+front50:
+  baseUrl: http://front50.spinnaker.dev.lkt.is:8080
+
+orca:
+  baseUrl: http://orca.spinnaker.dev.lkt.is:8083

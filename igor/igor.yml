@@ -1,0 +1,26 @@
+services:
+  echo:
+    baseUrl: http://echo.spinnaker.dev.lkt.is:8089
+
+jenkins:
+  enabled: true
+  masters:
+    -
+      name: ci-corp # The display name for this server
+      address: https://ci.corp.lookout.com/
+      username: aaa
+      password: bbb
+
+
+spinnaker:
+  build:
+    pollInterval: 15
+
+server:
+  port: 8088
+
+redis:
+  connection: redis://redis.spinnaker.dev.lkt.is:6379
+
+endpoints.health.sensitive: false
+

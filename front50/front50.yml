@@ -1,0 +1,13 @@
+cassandra:
+  enabled: false
+
+spinnaker:
+  cassandra:
+    enabled: false
+  redis:
+    enabled: false
+  s3:
+    enabled: true
+    bucket: 'front50-dev'
+    rootFolder: 'current'
+

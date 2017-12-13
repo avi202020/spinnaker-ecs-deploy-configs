@@ -1,0 +1,32 @@
+redis:
+  poll:
+    intervalSeconds: 60
+  parallelism: 1
+  connection: redis://redis.spinnaker.dev.lkt.is:6379
+
+serviceLimits:
+  implementationLimits:
+    AmazonEC2:
+      defaults:
+        rateLimit: 10
+    AmazonElasticLoadBalancing:
+      defaults:
+        rateLimit: 10
+
+aws:
+  enabled: true
+
+  accounts:
+    - name: continuous-delivery
+      accountId: "12345678901234"
+      regions:
+        - name: us-west-2
+  defaultAssumeRole: role/SpinnakerManaged
+
+ecs:
+  enabled: true
+  accounts:
+    - name: continuous-delivery-ecs
+      awsAccount: continuous-delivery
+
+
