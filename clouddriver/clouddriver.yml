@@ -2,7 +2,7 @@ redis:
   poll:
     intervalSeconds: 60
   parallelism: 1
-  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  connection: redis://ecs-demo-cluster.syhg4o.0001.use1.cache.amazonaws.com:6379
 
 serviceLimits:
   implementationLimits:
@@ -17,16 +17,16 @@ aws:
   enabled: true
 
   accounts:
-    - name: continuous-delivery
-      accountId: "12345678901234"
+    - name: spinnaker-account
+      accountId: "146694659492" 
       regions:
-        - name: us-west-2
+        - name: us-east-1
   defaultAssumeRole: role/SpinnakerManaged
 
 ecs:
   enabled: true
   accounts:
-    - name: continuous-delivery-ecs
-      awsAccount: continuous-delivery
+    - name: spinnaker-account-ecs
+      awsAccount: spinnaker-account
 
 
