@@ -1,5 +1,5 @@
 redis:
-  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  connection: redis://${SPINNAKER_REDIS_HOST}:6379
   configuration:
     secure:
       true
