@@ -28,7 +28,7 @@ echo "%%% Done updating the default Gate URL"
 
 
 # Publish docker image
-ACCOUNT=769716316905
+ACCOUNT=146694659492
 REPOSITORY=${APP_NAME}
 TAG=latest
 COMMIT_HASH="$(git rev-parse --verify HEAD)"

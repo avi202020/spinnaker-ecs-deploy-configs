@@ -1,17 +1,17 @@
 redis:
-  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  connection: redis://${SPINNAKER_REDIS_HOST}:6379
   configuration:
     secure:
       true
 
 front50:
   enabled: true
-  baseUrl: http://front50.spinnaker.dev.lkt.is:8080
+  baseUrl: http://${SPINNAKER_FRONT50_HOST}:8080
 
 oort:
-  baseUrl: http://clouddriver.spinnaker.dev.lkt.is:7002
+  baseUrl: http://${SPINNAKER_CLOUDDRIVER_HOST}:7002
 mort:
-  baseUrl: http://clouddriver.spinnaker.dev.lkt.is:7002
+  baseUrl: http://${SPINNAKER_CLOUDDRIVER_HOST}:7002
 kato:
-  baseUrl: http://clouddriver.spinnaker.dev.lkt.is:7002
+  baseUrl: http://${SPINNAKER_CLOUDDRIVER_HOST}:7002
 

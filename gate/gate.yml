@@ -6,19 +6,19 @@ redis:
 
 services:
   orca:
-    baseUrl: http://orca.spinnaker.dev.lkt.is:8083
+    baseUrl: http://${SPINNAKER_ORCA_HOST}:8083
   front50:
-    baseUrl: http://front50.spinnaker.dev.lkt.is:8080
+    baseUrl: http://${SPINNAKER_FRONT50_HOST}:8080
   rosco:
     enabled: false
   deck:
-    baseUrl: http://deck.spinnaker.dev.lkt.is
+    baseUrl: http://${SPINNAKER_DECK_HOST}
   clouddriver:
-    baseUrl: http://clouddriver.spinnaker.dev.lkt.is:7002
+    baseUrl: http://${SPINNAKER_CLOUDDRIVER_HOST}:7002
   igor:
     enabled: true
-    baseUrl: http://igor.spinnaker.dev.lkt.is:8088
+    baseUrl: http://${SPINNAKER_IGOR_HOST}:8088
   echo:
     enabled: true
-    baseUrl: http://echo.spinnaker.dev.lkt.is:8089
+    baseUrl: http://${SPINNAKER_ECHO_HOST}:8089
 

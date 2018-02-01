@@ -3,14 +3,14 @@ server:
 
 redis:
   timeout: 5000
-  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  connection: redis://${SPINNAKER_REDIS_HOST}:6379
 
 spinnaker:
   cassandra:
     enabled: false
 
 front50:
-  baseUrl: http://front50.spinnaker.dev.lkt.is:8080
+  baseUrl: http://${SPINNAKER_FRONT50_HOST}:8080
 
 orca:
-  baseUrl: http://orca.spinnaker.dev.lkt.is:8083
+  baseUrl: http://${SPINNAKER_ORCA_HOST}:8083

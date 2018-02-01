@@ -1,13 +1,13 @@
 services:
   echo:
-    baseUrl: http://echo.spinnaker.dev.lkt.is:8089
+    baseUrl: http://${SPINNAKER_ECHO_HOST}:8089
 
 jenkins:
   enabled: true
   masters:
     -
-      name: ci-corp # The display name for this server
-      address: https://ci.corp.lookout.com/
+      name: aig-jenkins # The display name for this server
+      address: https://jenkins.aig.com/
       username: aaa
       password: bbb
 
@@ -20,7 +20,7 @@ server:
   port: 8088
 
 redis:
-  connection: redis://redis.spinnaker.dev.lkt.is:6379
+  connection: redis://${SPINNAKER_REDIS_HOST}:6379
 
 endpoints.health.sensitive: false
 
