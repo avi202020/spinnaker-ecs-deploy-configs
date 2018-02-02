@@ -10,7 +10,7 @@ spinnaker:
     enabled: false
 
 front50:
-  baseUrl: http://${SPINNAKER_FRONT50_HOST}:8080
+  baseUrl: http://${SPINNAKER_HOSTNAME}:8080
 
 orca:
-  baseUrl: http://${SPINNAKER_ORCA_HOST}:8083
+  baseUrl: http://${SPINNAKER_HOSTNAME}:8083
